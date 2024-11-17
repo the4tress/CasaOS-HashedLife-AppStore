@@ -47,7 +47,6 @@ services:
     cap_add: []
     network_mode: bridge
     privileged: false
-
 x-casaos:
   architectures:
     - amd64
@@ -58,8 +57,8 @@ x-casaos:
   description:
     en_us: 'Visit project homepage: https://github.com/jmbannon/ytdl-sub'
   tagline:
-    en_us: A tool to monitor YT channels and automatically download the content with matadata for Emby/Plex as TV Shows.
-  project_url: https://github.com/jmbannon/ytdl-sub
+    en_us: A tool to monitor YT channels
+  project_url: 'https://github.com/jmbannon/ytdl-sub'
   developer: LinuxServer.io
   author: the4tress
   category: LinuxServer.io
@@ -67,10 +66,10 @@ x-casaos:
   index: /jmbannon/ytdl-sub
   port_map: ""
   is_uncontrolled: false
-  icon: https://static-00.iconduck.com/assets.00/youtube-dl-icon-512x512-0n8x1tr8.png
-  thumbnail: https://static-00.iconduck.com/assets.00/youtube-dl-icon-512x512-0n8x1tr8.png
+  icon: 'https://static-00.iconduck.com/assets.00/youtube-dl-icon-512x512-0n8x1tr8.png'
+  thumbnail: 'https://static-00.iconduck.com/assets.00/youtube-dl-icon-512x512-0n8x1tr8.png'
   scheme: https
-  store_app_id: infallible_kaity
+  store_app_id: ytdl-sub
   tips:
     custom: Use a file editor to edit the files in the /config folder.
 
