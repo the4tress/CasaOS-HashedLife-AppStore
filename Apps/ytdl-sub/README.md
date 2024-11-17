@@ -1,7 +1,5 @@
 # YouTube_DL
 
-This container needs special attention. Please check https://hub. Docker. Com/r/linuxserver/yq for details.
+Visit project homepage
 
 ---
-
-**WebUI Port:** `80`
