@@ -1,4 +1,4 @@
-name: ytdl-sub
+name: linuxserver-ytdl-sub
 services:
   app:
     container_name: ytdl-sub
@@ -60,7 +60,7 @@ x-casaos:
   tagline:
     en_us: A tool to monitor YT channels and automatically download the content with matadata for Emby/Plex as TV Shows.
   project_url: https://github.com/jmbannon/ytdl-sub
-  developer:LinuxServer.io
+  developer: LinuxServer.io
   author: the4tress
   category: LinuxServer.io
   hostname: https://github.com
