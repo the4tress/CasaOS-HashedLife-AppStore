@@ -58,9 +58,9 @@ x-casaos:
     en_us: 'Visit project homepage: https://github.com/jmbannon/ytdl-sub'
   tagline:
     en_us: A tool to monitor YT channels
-  developer: LinuxServer.io
+  developer: Hashed.Life
   author: the4tress
-  category: LinuxServer.io
+  category: Hashed.Life
   icon: 'https://static-00.iconduck.com/assets.00/youtube-dl-icon-512x512-0n8x1tr8.png'
   thumbnail: 'https://static-00.iconduck.com/assets.00/youtube-dl-icon-512x512-0n8x1tr8.png'
   store_app_id: ytdl-sub
