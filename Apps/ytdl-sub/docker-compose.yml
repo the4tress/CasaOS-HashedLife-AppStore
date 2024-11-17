@@ -1,20 +1,29 @@
 name: ytdl-sub
 services:
-  main_app:
-    cpu_shares: 10
-    command: []
+  app:
     container_name: ytdl-sub
-    deploy:
-      resources:
-        limits:
-          memory: 256M
-    environment:
-      - DOCKER_MODS=linuxserver/mods:universal-cron
-    hostname: ytdl-sub
     image: ghcr.io/jmbannon/ytdl-sub:latest
-    labels:
-      icon: https://static-00.iconduck.com/assets.00/youtube-dl-icon-512x512-0n8x1tr8.png
     restart: unless-stopped
+    environment:
+      DOCKER_MODS: linuxserver/mods:universal-cron
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    x-casaos:
+      envs:
+        - container: DOCKER_MODS
+          description:
+            en_us: for enabling the cron job
+        - container: PUID
+          description:
+            en_us: for UserID
+        - container: PGID
+          description:
+            en_us: for GroupID
+        - container: TZ
+          description:
+            en_us: specify a timezone to use, see this list.
+    ports: []
     volumes:
       - type: bind
         source: /DATA/AppData/ytdl-sub/config
@@ -25,7 +34,15 @@ services:
       - type: bind
         source: /DATA/Downloads
         target: /downloads
-    ports: []
+    command: []
+    cpu_shares: 10
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+    hostname: ytdl-sub
+    labels:
+      icon: https://static-00.iconduck.com/assets.00/youtube-dl-icon-512x512-0n8x1tr8.png
     devices: []
     cap_add: []
     network_mode: bridge
@@ -43,9 +60,9 @@ x-casaos:
   tagline:
     en_us: A tool to monitor YT channels and automatically download the content with matadata for Emby/Plex as TV Shows.
   project_url: https://github.com/jmbannon/ytdl-sub
-  developer: Hashed.Life
+  developer:LinuxServer.io
   author: the4tress
-  category: Hashed Life
+  category: LinuxServer.io
   hostname: https://github.com
   index: /jmbannon/ytdl-sub
   port_map: ""
