@@ -4,7 +4,7 @@ services:
     image: ghcr.io/jmbannon/ytdl-sub:latest
     restart: unless-stopped
     environment:
-      DOCKER_MODS: linuxserver/mods:universal-cron
+      DOCKER_MODS: 'linuxserver/mods:universal-cron'
       PUID: $PUID
       PGID: $PGID
       TZ: $TZ
@@ -22,7 +22,6 @@ services:
         - container: TZ
           description:
             en_us: specify a timezone to use, see this list.
-    ports: []
     volumes:
       - type: bind
         source: /DATA/AppData/ytdl-sub/config
@@ -38,15 +37,15 @@ x-casaos:
     - amd64
     - arm64
   main: app
-  title:
-    en_us: YouTube_DL
   description:
-    en_us: 'Visit project homepage: https://github.com/jmbannon/ytdl-sub'
+    en_us: Visit project homepage
   tagline:
     en_us: A tool to monitor YT channels
   developer: Hashed.Life
   author: the4tress
-  category: Hashed.Life
   icon: 'https://static-00.iconduck.com/assets.00/youtube-dl-icon-512x512-0n8x1tr8.png'
   thumbnail: 'https://static-00.iconduck.com/assets.00/youtube-dl-icon-512x512-0n8x1tr8.png'
+  title:
+    en_us: YouTube_DL
+  category: Hashed.Life
 
