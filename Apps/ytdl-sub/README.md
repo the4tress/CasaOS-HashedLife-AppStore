@@ -1,4 +1,4 @@
-# YouTube_DL
+# Yt
 
 Visit project homepage
 

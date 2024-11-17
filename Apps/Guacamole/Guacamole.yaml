@@ -1,0 +1,43 @@
+name: linuxserver-guacamole
+services:
+  guacamole:
+    cpu_shares: 90
+    command: []
+    container_name: guacamole
+    deploy:
+      resources:
+        limits:
+          memory: 7932M
+    hostname: guacamole
+    image: oznu/guacamole:latest
+    labels:
+      icon: https://upload.wikimedia.org/wikipedia/commons/3/31/Apache_Guacamole_logo.png
+    ports:
+      - target: 8080
+        published: "8003"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/gucacamole/config
+        target: /config
+    devices: []
+    cap_add: []
+    environment: []
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  author: the4tress
+  category: Hashed.Life
+  developer: Hashed.Life
+  hostname: rdp.hashed.life
+  icon: https://upload.wikimedia.org/wikipedia/commons/3/31/Apache_Guacamole_logo.png
+  index: /
+  is_uncontrolled: false
+  port_map: ""
+  scheme: https
+  store_app_id: heuristic_jorja
+  tips:
+    custom: "`guacadmin` / `guacadmin`"
+  title:
+    custom: Guacamole
