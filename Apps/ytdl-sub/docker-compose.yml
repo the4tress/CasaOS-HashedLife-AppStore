@@ -1,4 +1,4 @@
-name: linuxserver-yt
+name: linuxserver-ytdl-sub
 services:
   app:
     image: ghcr.io/jmbannon/ytdl-sub:latest
@@ -46,6 +46,6 @@ x-casaos:
   icon: 'https://static-00.iconduck.com/assets.00/youtube-dl-icon-512x512-0n8x1tr8.png'
   thumbnail: 'https://static-00.iconduck.com/assets.00/youtube-dl-icon-512x512-0n8x1tr8.png'
   title:
-    en_us: Yt
+    en_us: YTDL-sub
   category: Hashed.Life
 
