@@ -1,4 +1,4 @@
-name: linuxserver-yq
+name: linuxserver-yq2
 services:
   app:
     image: linuxserver/yq:3.4.3
@@ -32,7 +32,7 @@ x-casaos:
     - arm64
   main: app
   title:
-    en_us: Yq
+    en_us: Yq2
   description:
     en_us: This container needs special attention. Please check https://hub.docker.com/r/linuxserver/yq for details.
   tagline:
