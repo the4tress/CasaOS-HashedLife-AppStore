@@ -38,7 +38,7 @@ x-casaos:
   tagline:
     en_us: A free, easy-to-use tool to help you collect, organize, annotate, cite, and share research.
   developer: Hashed.Life
-  author: WisdomSky
+  author: the4tress
   icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/zotero-icon.png
   thumbnail: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/zotero-icon.png
   title:

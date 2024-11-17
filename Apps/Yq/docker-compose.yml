@@ -31,15 +31,15 @@ x-casaos:
     - amd64
     - arm64
   main: app
+  title:
+    en_us: Yq
   description:
     en_us: This container needs special attention. Please check https://hub.docker.com/r/linuxserver/yq for details.
   tagline:
     en_us: This container needs special attention. Please check https://hub. Docker. Com/r/linuxserver/yq for details.
   developer: Hashed.Life
-  author: WisdomSky
+  author: the4tress
   icon: ''
   thumbnail: ''
-  title:
-    en_us: Yq
   category: Hashed.Life
   port_map: '80'
