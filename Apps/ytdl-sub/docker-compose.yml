@@ -1,0 +1,59 @@
+name: ytdl-sub
+services:
+  main_app:
+    cpu_shares: 10
+    command: []
+    container_name: ytdl-sub
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+    environment:
+      - DOCKER_MODS=linuxserver/mods:universal-cron
+    hostname: ytdl-sub
+    image: ghcr.io/jmbannon/ytdl-sub:latest
+    labels:
+      icon: https://static-00.iconduck.com/assets.00/youtube-dl-icon-512x512-0n8x1tr8.png
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/ytdl-sub/config
+        target: /config
+      - type: bind
+        source: /DATA/Media
+        target: /media
+      - type: bind
+        source: /DATA/Downloads
+        target: /downloads
+    ports: []
+    devices: []
+    cap_add: []
+    network_mode: bridge
+    privileged: false
+
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: app
+  title:
+    en_us: YouTube_DL
+  description:
+    en_us: 'Visit project homepage: https://github.com/jmbannon/ytdl-sub'
+  tagline:
+    en_us: A tool to monitor YT channels and automatically download the content with matadata for Emby/Plex as TV Shows.
+  project_url: https://github.com/jmbannon/ytdl-sub
+  developer: Hashed.Life
+  author: the4tress
+  category: Hashed Life
+  hostname: https://github.com
+  index: /jmbannon/ytdl-sub
+  port_map: ""
+  is_uncontrolled: false
+  icon: https://static-00.iconduck.com/assets.00/youtube-dl-icon-512x512-0n8x1tr8.png
+  thumbnail: https://static-00.iconduck.com/assets.00/youtube-dl-icon-512x512-0n8x1tr8.png
+  scheme: https
+  store_app_id: infallible_kaity
+  tips:
+    custom: Use a file editor to edit the files in the /config folder.
+
